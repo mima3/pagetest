@@ -462,8 +462,7 @@ def _explain_type(decl):
         decls = [_explain_decl_node(mem_decl) for mem_decl in decl.decls]
         members = ', '.join(decls)
 
-        return ('struct%s ' % (' ' + decl.name if decl.name else '') +
-                ('containing {%s}' % members if members else ''))
+        return ('struct%s ' % (' ' + decl.name if decl.name else '')  + ('containing {%s}' % members if members else ''))
 
 def show_func_defs(filename):
     # Note that cpp is used. Provide a path to your own cpp or
